@@ -1,19 +1,24 @@
+/* row width and margins */
 .row {
   width: 31.250em;
   margin: 0 auto;
 }
-
+/* ensuring that each row covers all of its columns */
 .row:after {
   content: ' ';
   display: table;
   clear: both;
 }
-
+/* float columns to left of row and make column width 100% of row width */
 .column {
   float: left;
   width: 100%;
 }
-
+/*
+  media query to retrieve device width
+  12 classes to split the row into 12 equal parts
+  1 hidden class to hide the column content
+*/
 @media screen and (max-width: 43em) {
   .column {
     float: left;
@@ -59,7 +64,11 @@
     display: none;
   }
 }
-
+/*
+  media query to retrieve device width
+  12 classes to split the row into 12 equal parts
+  1 hidden class to hide the column content
+*/
 @media screen and (min-width: 43em) {
     .column {
       float: left;
