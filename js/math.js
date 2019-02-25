@@ -1,7 +1,7 @@
 // Function to start when the web document is loaded
 $(document).ready(function() {
   //When the form with ID 'calcForm' is submitted this funciton runs
-  $('#calcForm').submit(function(event) {
+  $('#calcForm').keyup(function(event) {
     //stop the auto refresh of the page
     event.preventDefault();
     //retrieve the value in the input with ID 'employee'
