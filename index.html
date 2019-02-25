@@ -1,52 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- title of website to appear in the tab on browser-->
     <title>Absence Calculator</title>
+    <!-- character set -->
     <meta charset="utf-8">
+    <!-- styling css link -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- rows css link -->
     <link rel="stylesheet" type="text/css" href="rows.css">
+    <!-- jquery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jquery link -->
     <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- math link -->
     <script src="js/math.js"></script>
   </head>
   <body>
+    <!-- canvas of content-->
+    <!-- new row created -->
     <div class="row" id="canvas">
+      <!-- canvas of header -->
       <div id="headercanvas">
+        <!-- column of 12 created for both small and large devices -->
         <div class="column small-12 large-12 header">
+          <!-- heading of page -->
           <h1>Absence Calculator</h1>
         </div>
       </div>
+      <!-- canvas for form -->
       <div id="formcanvas">
+        <!-- form element created, autocomplete off to ensure the fields are reset to blank on page refresh-->
           <form autocomplete="off" id="calcForm">
+            <!-- new row created to organise the output elements -->
             <div class="row">
-            <div class="column small-hidden large-12">&nbsp;</div>
-            <div class="column small-hidden large-2">&nbsp;</div>
-            <p class="column smalltitle small-12 large-hidden">1 Month</p>
-            <div class="column small-12 large-3" id="monthcontainer">
-              <output class="output" id="month" name="month">£0.00</output>
+              <!-- blank space to lower all further columns-->
+              <div class="column small-hidden large-12">&nbsp;</div>
+              <!-- blank space of 2 for large devices -->
+              <div class="column small-hidden large-2">&nbsp;</div>
+              <!-- Month title for small devices only -->
+              <p class="column smalltitle small-12 large-hidden">1 Month</p>
+              <!-- container for month output-->
+              <div class="column small-12 large-3" id="monthcontainer">
+                <!-- Month output element -->
+                <output class="output" id="month" name="month">£0.00</output>
+              </div>
+              <!-- blank space of 2 for large devices-->
+              <div class="column small-hidden large-2">&nbsp;</div>
+              <!-- year title for small devices only -->
+              <p class="column smalltitle small-12 large-hidden">1 Year</p>
+              <!-- container for year output -->
+              <div class="column small-12 large-3" id="yearcontainer">
+                <!-- year output element-->
+                <output class="output" id="year" name="year">£0.00</output>
+              </div>
+              <!-- blank space of 2 for large devices-->
+              <div class="column small-hidden large-2">&nbsp;</div>
             </div>
-            <div class="column small-hidden large-2">&nbsp;</div>
-            <p class="column smalltitle small-12 large-hidden">1 Year</p>
-            <div class="column small-12 large-3" id="yearcontainer">
-              <output class="output" id="year" name="year">£0.00</output>
+            <!-- row created for headings for large devices, hidden on small devices -->
+            <div class="row small-hidden">
+              <!-- blank space of 2 -->
+              <div class="column large-2">&nbsp;</div>
+              <!-- month title for large devices -->
+              <p class="column largetitle large-3">1-Month</p>
+              <!-- blank space of 2 -->
+              <div class="column large-2">&nbsp;</div>
+              <!-- year title for large deivces -->
+              <p class="column largetitle large-3">1-Year</p>
+              <!-- blank space of 2 -->
+              <div class="column large-2">&nbsp;</div>
             </div>
-            <div class="column small-hidden large-2">&nbsp;</div>
-          </div>
-          <div class="row small-hidden">
-            <div class="column large-2">&nbsp;</div>
-            <p class="column largetitle large-3">1-Month</p>
-            <div class="column large-2">&nbsp;</div>
-            <p class="column largetitle large-3">1-Year</p>
-            <div class="column large-2">&nbsp;</div>
-          </div>
-          <div class="row">
-            <div class="column small-12 large-hidden">&nbsp;</div>
-            <input class="input" id="employee" placeholder="Current Number of Employees" type="number"></input>
-            <div class="column small-12 large-12">&nbsp;</div>
-            <input class="input" id="salary" placeholder="Average Salary of Company (£)" type="number"></input>
-            <div class="column small-12 large-12">&nbsp;</div>
-            <input class="input" id="rate" placeholder="Annual Absence Rate (%) " type="number"></input>
-            <input class="submit" type="submit" value="Calculate" id="submit"></input>
+            <!-- new row created for inputs -->
+            <div class="row">
+              <!-- blank space lowering inputs on small devices, hidden on large devices -->
+              <div class="column small-12 large-hidden">&nbsp;</div>
+              <!-- input field for current number of employees -->
+              <input class="input" id="employee" placeholder="Current Number of Employees" type="number"></input>
+              <!-- blank space of 12 to lower input fields -->
+              <div class="column small-12 large-12">&nbsp;</div>
+              <!-- input field for the average salary of company -->
+              <input class="input" id="salary" placeholder="Average Salary of Company (£)" type="number"></input>
+              <!-- blank space of 12 the lower input fields -->
+              <div class="column small-12 large-12">&nbsp;</div>
+              <!-- input field for annual absence rate % -->
+              <input class="input" id="rate" placeholder="Annual Absence Rate (%) " type="number"></input>
+            </div>
           </form>
         </div>
       </div>
