@@ -10,6 +10,10 @@ $(document).ready(function() {
     var sal = document.getElementById("salary").value;
     //retrieve the value in the input with ID 'rate'
     var abs = document.getElementById("rate").value;
+    //check abs value, if value is above 100 show error message
+    if(abs > 100) {
+      alert('Please enter a number between 0 and 100 into Annual Absence Rate.');
+    } else {
     //set variable month to 0
     var month = 0;
     //set variable year to 0
@@ -33,6 +37,6 @@ $(document).ready(function() {
     document.getElementById("year").innerHTML = '£' + year.toFixed(2);
     //set the element with the ID 'month' to £ + the value of the month variable, rounded to 2 decimal places
     document.getElementById("month").innerHTML = '£' + month.toFixed(2);
-  });
+  }});
 
 });

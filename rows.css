@@ -1,116 +1,27 @@
-/* row width and margins */
-.row {
-  width: 31.250em;
-  margin: 0 auto;
-}
-/* ensuring that each row covers all of its columns */
-.row:after {
-  content: ' ';
-  display: table;
-  clear: both;
-}
-/* float columns to left of row and make column width 100% of row width */
-.column {
-  float: left;
-  width: 100%;
-}
-/*
-  media query to retrieve device width
-  12 classes to split the row into 12 equal parts
-  1 hidden class to hide the column content
-*/
-@media screen and (max-width: 43em) {
-  .column {
-    float: left;
-    box-sizing: border-box;
-  }
-  .small-1 {
-    width: 8.333%;
-  }
-  .small-2 {
-    width: 16.666%;
-  }
-  .small-3 {
-    width: 25%;
-  }
-  .small-4 {
-    width: 33.333%;
-  }
-  .small-5 {
-    width: 41.666%;
-  }
-  .small-6 {
-    width: 50%;
-  }
-  .small-7 {
-    width: 58.333%;
-  }
-  .small-8 {
-    width: 66.666%;
-  }
-  .small-9 {
-    width: 75%;
-  }
-  .small-10 {
-    width: 83.333%;
-  }
-  .small-11 {
-    width: 91.666%;
-  }
-  .small-12 {
-    width: 100%;
-  }
-  .small-hidden {
-    display: none;
-  }
-}
-/*
-  media query to retrieve device width
-  12 classes to split the row into 12 equal parts
-  1 hidden class to hide the column content
-*/
-@media screen and (min-width: 43em) {
-    .column {
-      float: left;
-      box-sizing: border-box;
-    }
-    .large-1 {
-      width: 8.333%;
-    }
-    .large-2 {
-      width: 16.666%;
-    }
-    .large-3 {
-      width: 25%;
-    }
-    .large-4 {
-      width: 33.333%;
-    }
-    .large-5 {
-      width: 41.666%;
-    }
-    .large-6 {
-      width: 50%;
-    }
-    .large-7 {
-      width: 58.333%;
-    }
-    .large-8 {
-      width: 66.666%;
-    }
-    .large-9 {
-      width: 75%;
-    }
-    .large-10 {
-      width: 83.333%;
-    }
-    .large-11 {
-      width: 91.666%;
-    }
-    .large-12 {
-      width: 100%;
-    }
-    .large-hidden {
-      display: none;
-    }
+/*CSS Document */
+/* positioning for each class in CSS Grid */
+.header { grid-area: header; }
+.month { grid-area: month; }
+.monthtitle { grid-area: montht; }
+.year { grid-area: year; }
+.yeartitle { grid-area: yeart; }
+.form { grid-area: form; }
+.form2 { grid-area: form2; }
+.form3 { grid-area: form3; }
+
+/*CSS Grid container*/
+.grid-container {
+	display: grid;
+	grid-template-columns: 2% auto 1% auto 2%;
+	grid-template-areas:
+    	'. month . year .'
+    	'. montht . yeart .'
+		'. form form form .'
+		'. form form form .'
+		'. form form form .';
+	grid-gap: 10px;
+	background-color: #F2F2F2;
+	padding: 10px;
+	width: 31.250em;
+	margin: 0 auto;
 }

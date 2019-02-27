@@ -1,86 +1,74 @@
-/* html styling */
-html{
-  font-family: 'Open Sans', sans-serif;
-  background: #7B7B7B;
+/* CSS Document */
+/* html document parent styles */
+html {
+	font-family: 'Open Sans', sans-serif;
+	background: #7B7B7B;
 }
-/* header styling */
-#headercanvas {
-  height: 2.813em;
-  width: 100%;
-  background-color: #0C55A5;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-style: solid;
-}
-/* form styling */
-#formcanvas {
-  width: 100%;
-  background-color: #F2F2F2;
-  border-style: solid;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-/* heading text styling */
+/* h1 styles */
 h1 {
-  text-align: center;
-  color: #F2F2F2;
-  margin: 0 auto;
+	text-align: center;
+	font-size: 32pt;
+	margin: 0 auto;
+	color: #F2F2F2;
 }
-/* styling for titles visible on smaller displays */
-.smalltitle {
-  text-align: center;
-  font-size: 13pt;
+/* header styles */
+header {
+	height: 2.813em;
+	background-color: #0C55A5;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	width: 31.250em;
+	margin: 0 auto;
+	padding: 10px;
 }
-/* styling for titles visible on larger displays */
-.largetitle {
-  text-align: center;
-  font-size: 13pt;
+/* canvas class styles */
+.canvas {
+	width: 100%;
+	border-style: solid;
 }
-/* input element styling */
-.input {
-  margin: 0px 0px 20px 50px;
-  padding: 20px;
-  width: 70%;
-  height: 30px;
-  font-size: 12pt;
-  text-align: center;
+/* formcanvas styles */
+.formcanvas {
+	background-color: #F2F2F2;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
 }
-/* submit button styling*/
-.submit {
-  margin: 0% 0% 2% 25%;
-  width: 50%;
-  height: 30px;
-  font-size: 10pt;
-  text-align: center;
+/* input field styles */
+input {
+	width: 70%;
+	margin: 0px 0px 20px 50px;
+	padding: 20px;
+	height: 30px;
+	font-size: 12pt;
+	text-align: center;
 }
-/* Remove input spinner For Firefox */
-input[type='number'] {
-    -moz-appearance:textfield;
+/* remove the spinner in the input fields on browsers */
+input[type="number"] {
+	-moz-appearance: textfield;
 }
-
-/* Remove input spinner for Webkit browsers like Safari and Chrome */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
-/* placeholder styling */
+/* placeholder styles */
 ::placeholder {
-  color: #000000;
-  font-style: oblique;
-  font-size: 12pt;
+	color: #000000;
+	font-style: oblique;
+	font-size: 12pt;
 }
-/* container for month output styling */
-#monthcontainer {
-  border-style: solid;
-  background: white;
-  padding: 10px;
-  text-align: center;
+/* ouput field styles */
+output {
+	border-style: solid;
+	background: white;
+	padding: 10px;
+	text-align: center;
 }
-/* container for year output styling */
-#yearcontainer {
-  border-style: solid;
-  background: white;
-  padding: 10px;
-  text-align: center;
+/* p tag styles */
+p {
+	text-align: center;
+	font-size: 13pt;
+}
+/* label styles */
+label {
+	margin: 0 0 20px 50px;
 }
